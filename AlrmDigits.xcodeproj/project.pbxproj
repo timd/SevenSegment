@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		227602BF16F3C1BC00F1C012 /* DigitViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 227602BE16F3C1BC00F1C012 /* DigitViewTests.m */; };
 		22AD2EB916F1EA44005D2155 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22AD2EB816F1EA44005D2155 /* UIKit.framework */; };
 		22AD2EBB16F1EA44005D2155 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22AD2EBA16F1EA44005D2155 /* Foundation.framework */; };
 		22AD2EBD16F1EA44005D2155 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22AD2EBC16F1EA44005D2155 /* CoreGraphics.framework */; };
@@ -52,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		220E4B9F16F36D4F005431E5 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		227602BE16F3C1BC00F1C012 /* DigitViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DigitViewTests.m; sourceTree = "<group>"; };
 		22AD2EB516F1EA44005D2155 /* AlrmDigits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlrmDigits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22AD2EB816F1EA44005D2155 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		22AD2EBA16F1EA44005D2155 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -150,6 +153,7 @@
 		22AD2EBE16F1EA44005D2155 /* AlrmDigits */ = {
 			isa = PBXGroup;
 			children = (
+				220E4B9F16F36D4F005431E5 /* Config.h */,
 				22AD2EF816F1F3F5005D2155 /* Assets */,
 				22AD2EC716F1EA44005D2155 /* TPAppDelegate.h */,
 				22AD2EC816F1EA44005D2155 /* TPAppDelegate.m */,
@@ -184,6 +188,7 @@
 				22AD2EE816F1EA44005D2155 /* AlrmDigitsTests.h */,
 				22AD2EE916F1EA44005D2155 /* AlrmDigitsTests.m */,
 				22AD2EE316F1EA44005D2155 /* Supporting Files */,
+				227602BE16F3C1BC00F1C012 /* DigitViewTests.m */,
 			);
 			path = AlrmDigitsTests;
 			sourceTree = "<group>";
@@ -356,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22AD2EEA16F1EA44005D2155 /* AlrmDigitsTests.m in Sources */,
+				227602BF16F3C1BC00F1C012 /* DigitViewTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,6 +534,7 @@
 				22AD2EEF16F1EA44005D2155 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		22AD2EF016F1EA44005D2155 /* Build configuration list for PBXNativeTarget "AlrmDigitsTests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +543,7 @@
 				22AD2EF216F1EA44005D2155 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

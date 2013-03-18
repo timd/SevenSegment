@@ -18,6 +18,10 @@
 @property (strong, nonatomic) TPDigitView *digitThree;
 @property (strong, nonatomic) TPDigitView *digitFour;
 
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+
+@property (nonatomic, strong) NSDictionary *digitCodes;
+
 @end
 
 @implementation TPViewController
@@ -42,6 +46,8 @@
     self.digitFour = (TPDigitView *)[TPDigitView viewWithNibName:@"TPDigitView" owner:self];
     [self.digitFour setFrame:CGRectMake(165, 10, 45, 62)];
     [self.digitContainer addSubview:self.digitFour];
+    
+    [self.textField becomeFirstResponder];
 
 }
 
@@ -63,9 +69,37 @@
     [self.digitThree clearAllSegments];
     [self.digitFour clearAllSegments];
 }
+
 - (IBAction)didTapCharButton:(id)sender {
-    [self.digitOne setSegmentsForCharacter:@"e"];
-    [self.digitTwo setSegmentsForCharacter:@"e"];
-    [self.digitThree setSegmentsForCharacter:@"e"];
-    [self.digitFour setSegmentsForCharacter:@"e"];}
+    
+    NSString *input = [[self.textField text] uppercaseString];
+
+    NSString *firstDigit;
+    NSString *secondDigit;
+    NSString *thirdDigit;
+    NSString *fourthDigit;
+
+    if ([input length] > 0) {
+        firstDigit = [input substringWithRange:NSMakeRange(0, 1)];
+    }
+    
+    if ([input length] > 1) {
+        secondDigit = [input substringWithRange:NSMakeRange(1, 1)];
+    }
+
+    if ([input length] > 2) {
+        thirdDigit = [input substringWithRange:NSMakeRange(2, 1)];
+    }
+    
+    if ([input length] > 3) {
+        fourthDigit = [input substringWithRange:NSMakeRange(3, 1)];
+    }
+    
+    [self.digitOne setSegmentsForCharacter:firstDigit];
+    [self.digitTwo setSegmentsForCharacter:secondDigit];
+    [self.digitThree setSegmentsForCharacter:thirdDigit];
+    [self.digitFour setSegmentsForCharacter:fourthDigit];
+}
+
+
 @end
